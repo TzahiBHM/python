@@ -6,5 +6,7 @@ class Person:
 class Room:
     roomArr = []
 
-matrix = 10*[8*[0]]
-print(matrix)
+# matrix = 10*[8*[0]]
+# print(matrix)
+for x in range(0,6):
+  print(x)
