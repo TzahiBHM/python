@@ -1,3 +1,4 @@
+#---------------------------CLASSES-------------------------------
 class DDate:
     def __init__(self,d,m,y):
         self.date = d
@@ -21,20 +22,7 @@ class Book(Author):
     def BookInfo(self):
         return self.bookName + "|" + self.AuthorInfo()
 
-
-
-# authro1 = Author(14,2,95,"moshe")
-# print(authro1.AuthorInfo())
-
-# bookrr = 10*[]
-# bookrr[0] = Book(14,2,95,"Moshe","smell")
-# bookrr[1] = Book(18,5,92,"Yair","Food")
-# bookrr[2] = Book(11,1,98,"Robin","Rogatka")
-
-# b1 = Book(14,2,95,"Moshe","Smell")
-# print(b1.BookInfo())
-
-#create books arr
+#--------------------------------MAIN-----------------------------------
 bookrr = []
 #add Books to arr
 bookrr.append(Book(14,2,95,"Moshe","smell"))    #0
