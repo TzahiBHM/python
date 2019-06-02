@@ -25,16 +25,16 @@ class Book(Author):
 #--------------------------------MAIN-----------------------------------
 bookrr = []
 #add Books to arr
-bookrr.append(Book(14,2,95,"Moshe","smell"))    #0
-bookrr.append(Book(18,3,91,"Dani","food"))     #1
+bookrr.append(Book(14,2,95,"Moshe","smell"))     #0
+bookrr.append(Book(18,3,91,"Dani","food"))       #1
 bookrr.append(Book(14,1,88,"Moshe","fruits"))    #2
-bookrr.append(Book(14,7,89,"Shimo","Malgeza"))    #3
-bookrr.append(Book(15,2,88,"Moshe","Traktor"))    #4
-bookrr.append(Book(12,1,75,"David","Fraud"))  #5
-bookrr.append(Book(14,2,95,"Moshe","Capit"))    #6
-bookrr.append(Book(14,2,95,"Shimi","Tree"))    #7
-bookrr.append(Book(14,2,95,"Moshe","C"))    #8
-bookrr.append(Book(14,2,95,"Peleg","Ferrari"))    #9
+bookrr.append(Book(14,7,89,"Shimo","Malgeza"))   #3
+bookrr.append(Book(15,2,88,"Moshe","Traktor"))   #4
+bookrr.append(Book(12,1,75,"David","Fraud"))     #5
+bookrr.append(Book(14,2,95,"Moshe","Capit"))     #6
+bookrr.append(Book(14,2,95,"Shimi","Tree"))      #7
+bookrr.append(Book(14,2,95,"Moshe","C"))         #8
+bookrr.append(Book(14,2,95,"Peleg","Ferrari"))   #9
     
 scan_name = input("Enter Name: ")
 for x in range(0,10):
