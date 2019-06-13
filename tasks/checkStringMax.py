@@ -5,7 +5,7 @@
 - print the index of the element that contains the given input - the highest times
 """
 
-#----------------CLASSES-----------------
+#----------------FUNCTIONS-----------------
 def check(mainS,st):
     rezef = 0
     count = 0
