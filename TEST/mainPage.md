@@ -3,10 +3,14 @@
 # דף עזרה למבחן
 ## קלט
 * input - מחזיר קלט מהמשתמש בתור מחרוזת
+
+<div dir="ltr">
+
 ```python
 
 name = input("Enter Name: ")
 ```
+</div>
 
 * int - ממיר ערך מסויים למספר
 ```python
