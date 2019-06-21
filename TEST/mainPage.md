@@ -62,6 +62,20 @@ print(string.startswith("wo",6,8)) # 'w' not equal to 'W' --> False
 
 </div>
 
+### endswith
+בדיוק כמו startswith רק שהבדיקה מתבצעת מהסוף
+
+<div dir="ltr">
+
+```python
+string = "Hello World"
+print(string.startswith("d")) # --> False
+print(string.endswith("d")) # --> True
+print(string.endswith("o",0,5)) # string[4]='o' --> True
+```
+</div>
+
+
 
 
 
