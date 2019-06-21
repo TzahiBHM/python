@@ -13,7 +13,8 @@ name = input("Enter Name: ")
 ```
 </div>
 
-* int - ממיר ערך מסויים למספר
+### int
+ממיר ערך מסויים למספר
 <div dir="ltr">
 
 ```python
