@@ -553,6 +553,168 @@ OUTPUT:
 ```
 </div>
 
+## פונקציות
+תחביר פונקציה:
 
+<div dir="ltr">
 
+```python
+def funcName(parameters):
+    code...
+```
+</div>
+* funcName - שם הפונקציה
+* parameters - פרמטרים
+* code - הקוד שנריץ בפונקציה<br />
+דוגמה לפונקציה המקבלת מספר ומדפיסה אם הוא גדול מאפס
+
+<div dir="ltr">
+
+```python
+def isBig(a):
+    if a>0:
+        print("Big")
+    else:
+        print("NOT BIG")
+
+isBig(3)
+isBig(0)
+isBig(-1)
+"""
+OUTPUT:
+Big
+NOT BIG
+NOT BIG
+"""
+```
+</div>
+
+### פרמטרים דיפולטיבים
+לפרמטרים דיפולטיבים מוגדר ערך ברירת מחדל וכך יוצר מצב שאנו לא חייבים לרשום אותו<br />
+דוגמה: ניצור פונקציה המקבלת שני מספרים ומחזירה את המכפלה ביניהם. <br />
+אם ייקלט רק מספר אחד הוא יוכפל ב 3.<br />
+את התוצאה נחזיר על ידי return
+
+<div dir="ltr">
+
+```python
+def cefel(a,b=3):
+    return a*b
+
+a = cefel(2,8)
+b = cefel(2)
+c = cefel(8)
+print("a:",a)
+print("b:",b)
+print("c:",c)
+
+"""
+OUTPUT:
+a: 16
+b: 6
+c: 24
+"""
+```
+</div>
+אם בפונקציה המון משתנשים דיפולטיבים ונרצה לשנות רק חלק מהם נבצע השמה רק על המשתנים אותם נרצה לשנות
+
+<div dir="ltr">
+
+```python
+def func(a,b=3,c=8):
+    print("a:",a, end=" ")
+    print("b:",b, end=" ")
+    print("c:",c)
+
+func(1,c=2)
+
+"""
+OUTPUT:
+a: 1 b: 3 c: 2
+"""
+```
+
+</div>
+
+### משתנה מספרי
+ניתן ליצור משתנה שיאגור בתוכו רשימה של מספרים בתוך משתנה אחד.<br />
+נסמן אותו בכוכבית (*) ונעבור עליו בלולאה (בעת יצירת משתנה מסוג כזה אנו יוצרים סוג של מערך מספרים)
+
+<div dir="ltr">
+
+```python
+def sum(*nums):
+    sumNumber = 0
+    for n in nums:
+        sumNumber+=n
+    return sumNumber
+print(sum(1,2,3,4))
+"""
+OUTPUT:
+10
+"""
+```
+</div>
+
+כמו שיצרנו משתנה לשמירה מספרים, ניתן לשמור מספר מחרוזות <br />
+נסמן את המשתנה בשתי כוכביות (**) והנתונים יישמרו למשתנה אחד כמו באובייקט
+
+<div dir="ltr">
+
+```python
+def printString(**string):
+    print(string)
+
+printString(first="Hello",Second="World",third="Python")
+
+"""
+OUTPUT:
+{'first': 'Hello', 'Second': 'World', 'third': 'Python'}
+"""
+```
+</div>
+
+ניתן לעבור על כל מחרוזת בנפרד על ידי פונקצית items והמילים השמורות key ו value
+<div dir="ltr">
+
+```python
+def printString(**string):
+        for x,y in string.items():
+            print("key:",x, "|","value:",y)
+
+printString(first="Hello",Second="World",third="Python")
+
+"""
+OUTPUT:
+key: first | value: Hello
+key: Second | value: World
+key: third | value: Python
+"""
+```
+</div>
+
+### משתה גלובאלי בפונקציה
+ניתן ליצור משתנה גלובאלי ולשנות אותו בתוך הפונקציה <br />
+נשתמש במילה השמורה global
+
+<div dir="ltr">
+
+```python
+x = 2
+def changeX():
+    global x
+    x= 40
+    print(x)
+
+print(x)
+changeX()
+"""
+OUTPUT:
+2
+40
+"""
+```
+</div>
+
+_ _ doc _ _
 </div><!-- rtl -->
