@@ -285,6 +285,274 @@ arr = ["A","C","B","E","D"]
 
 </div>
 
+### הדפסת מערך
+נדפיס מערך באמצות print
+הפלט יהיה בסוגריים מרובעים עם גרש/יים מסביב לכל איבר
+<div dir="ltr">
+
+```python
+arr = ["A","C","B","E","D"]
+print(arr)
+"""
+OUTPUT:
+['A', 'C', 'B', 'E', 'D']
+"""
+```
+</div>
+
+אם נרצה להדפיס רק את איברי המערך נשתמש בלולאה ונדפיס כל איבר
+<div dir="ltr">
+
+```python
+arr = ["A","C","B","E","D"]
+
+for x in arr:
+    print(x, end=" ")
+"""
+OUTPUT:
+A C B E D
+"""
+```
+</div>
+
+### הוספת תא למערך
+כדי להוסיף תא חדש למערך נשתמש ב append<br />
+אין אפשרות לגשת לאינדקס בגודל המערך ולבצע השמה אליו!!!
+
+<div dir="ltr">
+
+```python
+arr = ["A","C","B","E","D"]
+for x in arr:
+    print(x, end=" ")
+print() # break row
+arr.append("Z")
+for x in arr:
+    print(x, end=" ")
+"""
+OUTPUT:
+A C B E D
+A C B E D Z
+"""
+```
+</div>
+
+### שינוי ערך התא
+ניתן לגשת לתא במערך ולשנות את ערכו<br />
+** בפייתון יש כמה סוגים של מערכים(רשימות) . אם ניצור את המערך בסוגריים מרובעות כמו שלמדנו לא תהיה בעיה לשנות את ערך התא<br />
+
+<div dir="ltr">
+
+```python
+arr = ["A","C","B","E","D"]
+for x in arr:
+    print(x, end=" ")
+print() # break row
+arr[0] = "X"
+arr[1]="X"
+for x in arr:
+    print(x, end=" ")
+"""
+OUTPUT:
+A C B E D
+X X B E D
+"""
+```
+</div>
+
+### מיון מערך לפי האלף-בית
+כדי למיין מערך לפי האלף-בית נשתמש בפונקציה שנקראת sort
+
+<div dir="ltr">
+
+```python
+arr = ["A","C","B","E","D"]
+for x in arr:
+    print(x, end=" ")
+print() # break row
+arr.sort()
+for x in arr:
+    print(x, end=" ")
+"""
+OUTPUT:
+A C B E D
+A B C D E
+"""
+```
+</div>
+
+### מחיקת תא במערך
+מחיקת תא במערך משנה את גודל המערך, נשתמש ב del כדי לבצע את המחיקה
+
+<div dir="ltr">
+
+```python
+arr = ["A","C","B","E","D"]
+for x in arr:
+    print(x, end=" ")
+print() # break row
+del arr[3]
+for x in arr:
+    print(x, end=" ")
+"""
+OUTPUT:
+A C B E D
+A C B D
+"""
+```
+</div>
+
+## אובייקטים
+ניצור אובייקט על ידי התחביר הבא
+
+<div dir="ltr">
+
+```python
+objName = {
+    Property:Value
+}
+```
+</div>
+
+* objName - שם האובייקט
+* proprty - שם המאפיין
+* value - ערך המאפיין<br />
+
+דוגמה: ניצור אובייקט חדש בשם person ונאפיין אותו על ידי שם, שם משפחה, וסוגי המוסיקה שהוא שומע
+
+<div dir="ltr">
+
+```python
+person = {
+    "name": "Bob",
+    "LastName": "Abanai",
+    "age":18,
+    "sounds":["pop","jazz","rock"]
+}
+```
+
+</div>
+
+### הדפסת פרטי האובייקט
+כדי להדפיס את כל פרטי האובייקט נשתמש ב print ונדפיס את שם האובייקט
+
+<div dir="ltr">
+
+```python
+print(person)
+
+"""
+OUTPUT:
+{'name': 'Bob', 'LastName': 'Abanai', 'age': 18, 'sounds': ['pop', 'jazz', 'rock']}
+"""
+```
+
+</div>
+
+### הדפסת מאפיין ספציפי
+כמו במערך, במקום לכתוב את האינדקס אותו אנו רוצים להדפיס נכתוב את שם המאפיין
+
+<div dir="ltr">
+
+```python
+
+print(person["name"],person["LastName"])
+
+"""
+OUTPUT:
+Bob Abanai
+"""
+```
+</div>
+
+### עריכת מאפיין
+ניתן לערוך מאפיין בצורה הבאה:
+
+<div dir="ltr">
+
+```python
+person = {
+    "name": "Bob",
+    "LastName": "Abanai",
+    "age":18,
+    "sounds":["pop","jazz","rock"]
+}
+person["name"] = "Sami"
+person["LastName"] = "Acabai"
+
+print(person["name"], person["LastName"], "is ",person["age"],"years old")
+"""
+OUTPUT:
+Sami Acabai is  18 years old
+"""
+```
+
+</div>
+
+### מחיקת מאפיין
+נשתמש ב del כדי למחוק מאפיין
+
+<div dir="ltr">
+
+```python
+person = {
+    "name": "Bob",
+    "LastName": "Abanai",
+    "age":18,
+    "sounds":["pop","jazz","rock"]
+}
+print("BEFOR",person)
+del person["sounds"]
+
+print("AFTER",person)
+"""
+OUTPUT:
+BEFOR {'name': 'Bob', 'LastName': 'Abanai', 'age': 18, 'sounds': ['pop', 'jazz', 'rock']}
+AFTER {'name': 'Bob', 'LastName': 'Abanai', 'age': 18}
+"""
+```
+</div>
+
+### בדיקה האם מאפיין נמצא
+נשתמש בתנאי ובמילה השמורה in כדי לבדוק אם קיים מאפיין באובייקט
+
+<div dir="ltr">
+
+```python
+if "name" in person:
+    print("yes")
+
+"""
+OUTPUT:
+yes
+"""
+```
+</div>
+אין אפשרות להשתמש ב else אך אפשר להשתמש ב elif
+
+### הוספת מאפיין לאובייקט
+נוסיף מאפיין מקצוע על ידי כתיבת המאפיין החדש וביצוע השמה
+
+<div dir="ltr">
+
+```python
+person = {
+    "name": "Bob",
+    "LastName": "Abanai",
+    "age":18,
+    "sounds":["pop","jazz","rock"]
+}
+person["profession"] = "singer"
+print(person)
+
+"""
+OUTPUT:
+{'name': 'Bob', 'LastName': 'Abanai', 'age': 18, 'sounds': ['pop', 'jazz', 'rock'], 'profession': 'singer'}
+"""
+
+```
+</div>
+
 
 
 </div><!-- rtl -->
